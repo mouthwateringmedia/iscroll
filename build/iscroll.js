@@ -532,6 +532,11 @@ IScroll.prototype = {
 			newX, newY,
 			absDistX, absDistY;
 
+        if (window.is_page_rotated) {
+            deltaY		= point.pageX - this.pointX;
+			deltaX		= point.pageY - this.pointY;
+        }
+
 		this.pointX		= point.pageX;
 		this.pointY		= point.pageY;
 
